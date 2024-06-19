@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    height: 100vh;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0 auto;
@@ -10,43 +15,134 @@ body {
     font-size: 16px;
 }
 
+@media  (max-width: 900px) {
+
+    body{
+         font-size: 12px;
+    }
+
+    .movie-box-container {
+        flex-direction: column;
+        align-items: center;
+    }.movie-image {
+        height: 300px;
+        width: 250px;
+    }
+   .text-box {
+    width: 70%;
+
+   }
+   .button {
+    padding: 1em;
+    }
+}
+
+@media (min-width: 901px) {
+    .movie-image {
+        height: 300px;
+        width: 200px;
+    }
+    .text-box {
+        width: 50%;
+    
+       }
+
+       .button {
+       padding: .75em;
+       }
+}
+
+
 #main {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    gap: 10em;
     height: 100%;
+}
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #movie-box {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    padding: 1em;
-    margin: 0 3em;
+    flex-direction: column;
+    gap: 4em;
+    padding: 2em;
+    margin: 0 auto ;
+}
+.movie-box-container {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    gap: 2em; 
 }
 .movie-image {
-    height: 300px;
-    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 .text-box {
-    width: 100%;
-    height: 100%;
+    display:flex;
+    flex-direction: column;
     line-height: 1.7;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.1px;
+    font-size: 18px;
+}
+.text-box-title{
+    display: flex;
+    gap: .1em;
 }
 
 #search-box {
     display: flex;
     align-items: center;
-    gap: 1em;
+    gap: 2em;
+    margin:  0 auto;
+
 }
 .search-bar {
-    width: 30em;
-    padding: .3em;
-    font-size: 1em;
+    width: 30vw;
+    min-width: 10vw;
+    padding: .5em;
     text-decoration: none;
     border-radius: 5px ;
+    border: 1px solid black;
+    font-size: 18px;
+}
+.button {
+    background-color: black;
+    width: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+
+#header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 1em;
+     height: 10%;
+ /*   width: 100%; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2em;
+    margin-top: 15em ;
 }
